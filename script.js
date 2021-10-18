@@ -1,28 +1,28 @@
-function contagem() {
-    /* Conversao de variaveis */
-    var i = document.getElementById('inicio')
-    var f = document.getElementById('fim')
-    var p = document.getElementById('passo')
+function count() {
+    /* Variables */
+    var i = document.getElementById('beginning')
+    var f = document.getElementById('end')
+    var p = document.getElementById('pace')
     var res = document.getElementById('res')
 
-    if (inicio == '' || final == '' || passo == '') {
-        window.alert('Erro! Tente novamente.')
+    if (beginning == '' || end == '' || pace == '') {
+        window.alert('Error! Try again.')
     } else {
-        res.innerHTML = 'Contando: <br>'
-        var inicio = Number(i.value)
-        var final = Number(f.value)
-        var passo = Number(p.value)
-        if (passo <= 0) {
+        res.innerHTML = 'Counting: <br>'
+        var beginning = Number(i.value)
+        var end = Number(f.value)
+        var pace = Number(p.value)
+        if (pace <= 0) {
             window.alert('Passo Invalido! Tente novamente.')
         }
-        if (inicio < final) {
+        if (beginning < end) {
             // Contagem crescente
-            for (let c = inicio; c <= final; c += passo) {
+            for (let c = beginning; c <= end; c += pace) {
                 res.innerHTML += `${c}👉 `
             }
         } else {
             // Contagem regressiva
-            for (let c = inicio; c >= final; c -= passo) {
+            for (let c = beginning; c >= end; c -= pace) {
                 res.innerHTML += `${c}👉 `
             }
         }
